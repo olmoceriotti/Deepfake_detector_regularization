@@ -5,7 +5,10 @@ Gravili Andrea 2180997
 
 ## Overview
 
-This Colab notebook integrates the training of DeepFake detection models and the analysis of their robustness against adversarial attacks. It explores the capability of EfficientNet and its regularized version. To further compare the perfomances, two other techniques are used.
+This notebook integrates the training of DeepFake detection models and the analysis of their robustness against adversarial attacks. It explores the capability of EfficientNet and its regularized version. To further compare the perfomances, two other techniques are used.
+
+## Colab  
+To run this notebook on colab, visit this [folder](https://drive.google.com/drive/u/1/folders/1mBwCO-cjXpx-C7XxYUKBETOUHIDfKbcr).
 
 ## Setup Environment
 
@@ -13,7 +16,7 @@ This Colab notebook integrates the training of DeepFake detection models and the
 2.  **Execution Environment (Colab/Local):**
     *   The notebook auto-detects if it's running in Google Colab or a local environment.
     *   **Colab:** Mounts Google Drive and configures paths for datasets and models within a `CV` folder in your Drive. Prompts for WandB login.
-    *   **Local:** Configures paths relative to a local `./CV` directory. Requires prior WandB login via CLI (`wandb login`).
+    *   **Local:** Configures paths relative to a local directory, the same where the notebook is running. Requires prior WandB login via CLI (`wandb login`).
 3.  **Dataset:**
     *   Expects raw image data in `true_dataset` and `fake_dataset_one_source` subdirectories, further split into `train`, `validation`, and `test` sets.
     *  Supports loading preprocessed datasets to speed up subsequent runs. If not found, data is processed from raw images and saved as `.pkl` files.
@@ -25,7 +28,7 @@ This Colab notebook integrates the training of DeepFake detection models and the
       * The pkl files should be inserted in at the following path: `./data/Dataset_Preprocessed`
       * The raw datasets folder should be insterted at the following path: `./data/Dataset_Raw`
       * The models' pth files should be inserted at the following path: `./models/`
-    * All these directories should be set in the same location as the notebook.
+
 ## Configuration
 
 Key parameters can be adjusted in the "Globals" cell before execution:
